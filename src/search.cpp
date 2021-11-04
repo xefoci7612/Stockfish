@@ -1778,7 +1778,7 @@ moves_loop: // When in check, search starts here
     for (size_t i = 0; i < multiPV; ++i)
     {
       int sc = rootMoves[i].score;
-      float handicap = 2 * std::min(abs(sc - X0), float(PawnValueMg));
+      float handicap = 2 * std::min(abs(sc - X0), float(2 * PawnValueMg));
 
       if (sc - handicap >= bestValue)
       {
